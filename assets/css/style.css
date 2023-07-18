@@ -158,12 +158,11 @@ letter-spacing: 1px;
 .section-padding {padding:80px 0;}
 /*START SECTION TITLE DESIGN*/
 .section-title{margin-bottom:60px;}
-.section-title  h1 {
+.section-title h1 {
 font-size: 44px;
 font-weight: 600;
 margin-top: 0;
 position: relative;
-text-transform: capitalize;
 }
 h1.section-title-white{
 color:#fff;
@@ -440,9 +439,8 @@ width: 100%;
 .hero-text img{margin-bottom:30px}	
 .hero-text h1 {
 	color: #fff;
-	font-size: 75px;
+	font-size: 60px;
 	font-weight: 400;
-	text-transform: capitalize;
 }
 @media only screen and (max-width:768px) { 
 .hero-text h1{font-size:40px;}
@@ -548,30 +546,45 @@ width: 100px;
 }
 .single_about p{margin-bottom:30px}
 
+.service {
+	gap: 30px 0;
+}
+.white-popup {
+	position: relative;
+	background: #FFF;
+	padding: 40px;
+	width: auto;
+	max-width: 800px;
+	margin: 20px auto;
+}
+
+.white-popup h1 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+.white-popup li {
+	margin-bottom: 10px;
+}
+.white-popup li:last-child {
+	margin-bottom: 0;
+}
+.white-popup .open-popup-link {
+	display: block;
+	margin: 20px auto 0 auto;
+}
 .service_bg{background:#f9f9f9;}
 .serviceBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
 	margin-top: 10px;
 	position: relative;
 	background: #fff;
-	padding: 40px;
+	padding: 40px 20px;
 }
 @media only screen and (max-width:768px){
 .serviceBox{ margin-bottom:40px; }
-}
-.serviceBox:after{
-    content: "";
-    width: 100%;
-    height: 10px;
-    background: transparent;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: all 0.5s ease 0s;
-}
-.serviceBox:hover:after{
-    border-color: #35ac39;
 }
 .serviceBox .service-icon{
 color: #1d293e;
@@ -582,10 +595,10 @@ transition: all 0.5s ease 0s;
 }
 .serviceBox:hover .service-icon{color: #35ac39;}
 .serviceBox .title{
-font-size: 22px;
+font-size: 18px;
 font-weight: 600;
 margin: 0 0 15px;
-text-transform: capitalize;
+text-transform: uppercase;
 }
 .serviceBox .service-no{
     display: inline-block;
@@ -622,6 +635,7 @@ text-transform: capitalize;
 .single-team{
 position: relative;
 border-radius: 10px;
+height: 100%;
 }
 @media only screen and (max-width:768px) { 
 .single-team{margin-bottom: 30px;}
@@ -641,9 +655,15 @@ border-radius: 10px;
 	-o-transition: 0.3s;
 	border-radius: 10px;
 }
+.single-team .img {
+	height: 100%;
+}
+
 .single-team .img img {
 	border-radius: 10px;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 .single-team .team-content {
 	text-align: center;
@@ -788,7 +808,6 @@ position: relative;
 	border-radius: 5px;
 	color: #fff;
 	font-size: 16px;
-	padding: 14px 60px;
 	text-transform: capitalize;
 	transition: all 0.3s ease 0s;
 	font-weight: 700;
