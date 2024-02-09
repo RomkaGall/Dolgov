@@ -386,6 +386,7 @@ display: none;
 #mobile_menu{
 display: block;
 width: 100%;
+background: #fff;
 }
 .slicknav_nav ul li a{
 	font-size: 16px;
@@ -641,7 +642,17 @@ border-radius: 10px;
 height: 100%;
 }
 @media only screen and (max-width:768px) { 
-.single-team{margin-bottom: 30px;}
+.single-team{
+	height: auto;
+}
+body .single-team .team-content {
+	position: static;
+	opacity: 1;
+	visibility: visible;
+}
+.single-team::before {
+	display: none;
+} 
 }
 .single-team::before {
 	content: "";
@@ -703,10 +714,6 @@ font-size: 14px;
 	border-radius: 10px;
 }
 
-
-.our_team {
-	padding-bottom: 0;
-}
 
 .our_partners  {
 	padding-bottom: 80px;
@@ -1631,6 +1638,7 @@ padding: 60px 30px;
 	margin-bottom:30px;
 }
 .single_address i {
+	flex-shrink: 0;
 	color: #fff;
 	font-size: 22px;
 	margin-right: 20px;
@@ -1859,4 +1867,8 @@ text-transform: uppercase;
 
 a:hover {
 	color: #1d293e;
+}
+
+.mfp-content p {
+	margin: 40px 0;
 }
